@@ -1,7 +1,7 @@
 <?php
-
-include __DIR__ . "/models/data.php";
-
+include __DIR__ . "/models/product.php";
+include __DIR__ . "/models/categoria.php";
+include __DIR__ . "/data.php";
 ?>
 
 <!DOCTYPE html>
@@ -17,17 +17,13 @@ include __DIR__ . "/models/data.php";
     
     <h1 class="text-center my-2">Welcome to OOP 2</h1>
 
-    <ul>
-        <?php foreach($prodotti_cani as $prodotti) {
-            echo "<li>" . $prodotti->descrizione() . "</li>";
-        }?>
-    </ul>
 
-    <ul>
-        <?php foreach($prodotti_gatti as $prodotto) {
-            echo "<li>" . $prodotto->descrizione() . "</li>";
-        }?>
-    </ul>
+    <pre>
+        <?= var_dump($prodotti) ?>
+    </pre>
+
+    
+    
 
 </body>
 </html>
