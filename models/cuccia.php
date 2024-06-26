@@ -2,14 +2,17 @@
 
 class Cuccia extends Prodotto
 {
-    public $cuccia;
+    public $dimensioni_cuccia;
+    public $materiale_cuccia;
 
-    public function __construct($nome, $prezzo, $immagine, $cuccia, Categoria $categoria)
+    public function __construct($marca, $nome, $prezzo, $immagine, Categoria $categoria, $dimensioni, $materiale)
     {
+        $this->marca = $marca;
         $this->nome = $nome;
         $this->prezzo = $prezzo;
         $this->immagine = $immagine;
-        $this->cuccia = $cuccia;
         $this->categoria = $categoria;
+        $this->dimensioni_cuccia = $dimensioni;
+        $this->materiale_cuccia = $materiale;
     }
 }
